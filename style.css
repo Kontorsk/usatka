@@ -1,0 +1,261 @@
+/* @import url('https://fonts.googleapis.com/css2&family=Roboto&display=swap') */ /* импорт шрифта из интернетов */
+/* *{ 
+    padding: 0;
+    margin: 0;
+} */ /* сброс отступов по всему коду "*" перед этим всем */
+
+body {
+    background-color: #f1f2f2 ;
+    color: #0f141e;
+
+    font-size: 14px; /* размер текста */
+    font-weight: normal; /* жирность шрифта */
+    font-family: sans-serif; /* шрифт */
+
+    /* font: normal 14px sans-serif; */
+
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+a{
+    color: black;
+    text-decoration: none; /* убрать изначальное подчёркивание */
+}
+
+a:hover { /* когда наводишь мышку, тут чтобы подчёркивалось */
+    text-decoration: underline;
+}
+a:active { /* когда ссылка активна */
+    color: blue;
+}
+
+a:visited { /* когда ссылку прожимали */
+    color: gray;
+}
+
+.cat {
+    width: 250px;
+    border-radius: 30px; /* скругление */
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25); /* настраиваем тень */
+}
+
+#express { /* привязка id = #, class=. */
+    width: 200px;
+    border-radius: 30px;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+.photo p{ /* настраиваем текст подкартинкой */
+    color: rgb(66, 23, 36);
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: none;
+    /* text-transform: uppercase; */ /* капс */
+    /* letter-spacing: 1px; */ /* расстояние между букаами */
+    /* word-spacing: 5px; */ /* между словами */
+}
+
+.container { /* ко всему коду сделали класс */
+    max-width: 550px; /* сделали максимальную ширину страницы */
+    margin: auto; /* сделали её выравнивание по экрану, чтобы не всегда макс если не надо */
+}
+
+.preview {
+    /* background: brown; */
+    /* padding: 15px; */
+    padding: 0px 0px 0px 5px; /* внутренние отступы */
+    border: 5px dotted gold; /* рамку настраивали */
+    margin: 10px 0px 10px 0px; /* снешние отступы */
+    /* border-top-style:dotted; */
+    /* border-top-color:gold;
+    border-top-width: 3px;
+    border-bottom:3px dotted gold; */
+
+}
+
+/* .box-model > div {
+    float: left;
+    background: #000;
+    height: 200px;
+    border: 4px solid gold;
+    width: 25%;
+    box-sizing: border-box; 
+} */
+/* то что выше это сделали отдельные 4 блока на всю строку, первая строка - выравнивание, 5 строка 
+распределение 4х блоков по 25 проц, но 3я строка создает еще границы по 4 пикселя и чтобы крайний
+блок не сьехал вниз 5я строка это правит */
+
+
+.bg-yellow { /* сделали разные фоны для разных блоков */
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card { /* отдельно шаманили блоки ранее выделеннеы цветом */
+    padding: 10px 10px;
+    /* background: gold; */
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 { 
+    margin-bottom: 1px;
+}
+
+.list { /* тут делали по спискам отступ слева норм */
+    padding: 0 15px;
+    /* list-style: none; */
+}
+
+.list li { /* тут настраивали сам список */
+    color: #868698f;
+    margin-bottom: 5px;
+}
+.table {
+    width: 100%;
+}
+
+.table td { /* тут с табличкой */
+    padding-bottom: 10px;
+    background: silver;
+}
+
+.table tr:nth-child(2), tr:nth-child(3), tr:nth-child(4){ /* команда только к определенным строкам */
+    color: rgb(41, 5, 172);
+    font-weight: bolder;
+}
+
+/* .table tr:nth-child(even) { 
+    background: gold;
+}
+
+/* выше к чётным */
+
+/* .table tr:nth-child(odd) {
+    background: silver;
+} */
+
+/* выше к нечётным */
+
+.link-list li { /* тут по перечислениям со ссылками про место обитания прл сам список красиво делали */
+    list-style: none;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.link-list { /* настроил норм отступ слева для списка */
+    padding: 0 15px;
+}
+
+.contact h2 {
+    text-align: center; /* выравнивание по центру */
+}
+
+.form-group lable { /* настраивали сами формы, не ткст */
+    display: block; /* каждый блок на свою строку */
+    font-size: 14px;
+    color: #86898f;
+}
+.form-group input { /*текст внутри формы*/
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent; /*прозрачный фон*/
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 5px 5px 5px;
+    outline: none;
+    font-family: inherit; /*наследование шрифта*/
+}
+.form-group textarea { /*текст внутри области для текста*/
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 5px 5px 5px;
+    outline: none;
+    font-family: inherit;
+}
+
+.row {
+    display: flex; /*2 элемента (форм груп) на одной строчке*/
+    margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;    /*ширина каждого форм груп по 50 проц пространства*/
+    margin-right: 20px; /*между форм груп расстояние справа*/
+}
+
+.row > .form-group:last-child {
+    margin-right: 0px; /*крайний правый форм груп без отступа чтобы был от края*/
+}
+
+.photo {
+    display: flex;
+}
+
+.photo p { 
+    text-align: center;
+}
+
+.photo > div:first-child { /*для первой фотки сделал отступы */
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+
+@media (max-width:700px) {
+    .photo {
+        text-align: center;
+        display: block;
+    }
+    .photo div:first-child { /* обратно выровнял при сужении чтобы были по центру картинки */
+        margin-right: 0;
+    }
+}
+
+.btn {
+    background-color: #000;
+    margin-top: 10px;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    font-family: inherit;
+    cursor:pointer; /* чтобы менялся курсор при наведении */
+}
+
+.btn:hover {
+    opacity: 0.7; /* чтобы подсвечивалась при наведении кнопка */
+}
+
+/* Position */
+
+/* .position {
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 300px;
+} */
+/* position: relative относительно, т.к это родительский блок то дает для его дочерних абсолютных отсчёт от него как от начала стр */
+/*position: fixed; чтобы не перемещался при скролинге  */
+/* 
+.box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: lightcoral;
+} */
